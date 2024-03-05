@@ -1,0 +1,61 @@
+h1,h2,h3,h4,h5,h6{
+    color: #fff;
+}
+
+h1{
+    font-weight: 900;
+    font-size: 5.2rem;
+}
+
+@media(min-width: 1024px){
+    h1 {
+        font-size: 8.2rem;
+    }
+
+}
+
+.h1--accent{
+    color: var(--text-accent-clr);
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 237, 88, 0.5);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.9rem;
+}
+
+h2{
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--primary-clr);
+}
+
+.h2--black{
+    color: #000;
+}
+
+.h2--white{
+    color: #fff;
+}
+
+h3{
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.h3--black{
+    color: #000;
+}
+
+h4{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+@media(min-width: 768px){
+    h4{
+        font-size: 3.5rem;
+    }
+}
+
+h5{
+    font-size: 2rem;
+}

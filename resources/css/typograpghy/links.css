@@ -1,0 +1,21 @@
+.link{
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.login{
+    padding: 0.55rem 2.45rem 0.75rem 2.45rem;
+    border: 1px solid rgba(255 255 255 / 0.5);
+    border-radius: 1.7rem;    
+}
+
+
+@media(min-width: 992px){
+    .login{
+        margin-right: 3.2rem;
+    }
+    .sign-up{
+        margin-right: 2.8rem;
+    }
+}
+

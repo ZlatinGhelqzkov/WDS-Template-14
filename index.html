@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/104cd21b31.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,700;0,900;1,100&family=Lato:ital,wght@0,400;0,900;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+    <link rel="stylesheet" href="/resources/css/style.css">
+    <title>Standards</title>
+</head>
+<body>
+    <main class="main">
+
+        <button class="live-chat"><img src="/resources/images/live-chat.png"></button>
+
+        <div id="pop-up" class="pop-up">
+
+             <img class="pop-up-img" src="/resources/images/pop-up-avatar.png" alt="pop-up avatar">
+
+             <div class="pop-up-text">
+
+                 <span class="pop-up-msg">Someone from Malaga just booked an event with</span>
+                 <span class="pop-up-performer">Justin Bieber</span>
+                 <span class="pop-up-booked-time">1 Hour ago</span>
+
+             </div>
+             <a class="pop-up-x-mark" onclick="closePopUp()"><img src="/resources/images/x-mark.png" alt="x-mark"></a>
+
+        </div>
+
+        <!--HEADER-->
+        <header class="header">
+            <div class="wrapper">
+                <div class="header__inner">
+
+                    <a href="#" class="link">
+                        <img src="/resources/images/svg/logo.svg">
+                    </a>
+
+                    <div id="burger" class="burger" onclick="burgerToggle()">
+                        <span class="burger-line-top"></span>
+                        <span class="burger-line-center"></span>
+                        <span class="burger-line-bottom"></span>
+
+                    </div>
+                    
+                    <div id="header-nav" class="link-group">
+                        <a href="#" class="link login">Login</a>
+
+                        <a href="#" class="link sign-up">Sign Up</a>
+
+                        <div class="header-social-links">
+
+                            <a href="#" class="link link--social"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="link link--social"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="link link--social"><i class="fa-brands fa-linkedin-in"></i></a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <a id="header-lang" href="#" class="link lang">EN<i class="fa-solid fa-angle-down"></i></a>
+
+        </header>
+        <!--HEADER END-->
+
+
+
+        <!--INTRO-->
+        <section class="intro">
+
+            <div class="bg">
+
+                <img src="/resources/images/intro-carousel/intro-background.png" alt="intro-background">
+
+            </div>
+
+            <div class="wrapper">
+
+                <h1 class="intro-title">Hire Top Talents from <span class="h1--accent">Spain</span></h1>
+
+                <div class="looking-for">
+                    <h2 class="h2--black">I'm Looking For:</h2>
+
+                    <div id="looking-for-buttons" class="looking-for-buttons">
+                        <button class="looking-for-button" data-name="STAR" ><i class="fa-regular fa-star"></i>STAR</button>
+                        <button class="looking-for-button" data-name="PLACE" ><i class="fa-solid fa-location-dot"></i>PLACE</button>
+                        <button class="looking-for-button" data-name="EVENT" ><i class="fa-solid fa-calendar-days"></i>EVENT</button>
+                    </div>
+
+                    <form method="get" id="active-window" class="active-window">
+
+                        <div class="active-window-row">
+
+                            <div class="dropdown-radio select--find">
+
+                                <div class="select--find-arrow">
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+
+                                <div class="dropdown-radio-label">Looking for:</div>
+
+                                <ul class="dropdown-radio-content">
+                                    <li class="option">
+                                        <input type="radio" id="star" name="looking" value="STAR">
+                                        <label class="select--find-option" for="star">STAR</label><br>
+                                    </li>
+
+                                    <li class="option">
+                                        <input type="radio" id="place" name="looking" value="PLACE">
+                                        <label class="select--find-option" for="place">PLACE</label><br>
+                                    </li>
+
+                                    <li class="option">
+                                        <input type="radio" id="event" name="looking" value="EVENT">
+                                        <label class="select--find-option" for="event">EVENT</label><br>
+                                    </li>
+                            
+                                </ul>
+                            </div>
+
+                        </div>
+                    
+                        <div class="active-window-row">
+
+                            <div class="input--wrapper flex--3">
+                                <label class="active-window-label" for="searchField">Find an artist by name:</label>
+                                <input name="search" id="searchField" class="active-window-input input--search" type="search">
+
+                                <i class="fa-solid fa-magnifying-glass custom-symbol"></i>
+                            </div>
+                    
+                            <div class="input--wrapper flex--1">
+                                <label class="active-window-label" placeholder="Enter from Date" for="startDate">Available From Date:</label>
+                                <input name="fromDate" id="startDate" class="active-window-input input--date" type="date">
+                            </div>
+                    
+                            <div class="input--wrapper flex--1">
+                                <label class="active-window-label" for="endDate">Available To Date:</label>
+                                <input name="toDate" id="endDate" class="active-window-input input--date" type="date">
+                            </div>
+
+                        </div>
+                    
+                        <div class="active-window-row">
+
+                            <div class="input--wrapper flex--3">
+
+                                <label class="active-window-label">In City</label>
+
+                                <select class="active-window-input active-window-input--nobold">
+
+                                    <option value="Madrid">Madrid</option>
+                                    <option value="Berlin">Berlin</option>
+                                    <option value="London">London</option>
+                                    <option value="Paris">Paris</option>
+
+                                 </select>
+
+                                 <i class="fa-solid fa-angle-down custom-symbol"></i>
+
+                            </div>
+                            
+                            <div class="input--wrapper flex--1">
+                                <label class="active-window-label">Within Radius:</label>
+                                <input name="radius" id="numberInput" class="active-window-input input--number" pattern="\d*" type="number">
+                            
+                                <p class="custom-symbol">km</p>
+                            </div>
+                    
+                            <div class="input--wrapper flex--1">
+                                <button class="active-window-button"><p>See on Map</p> <i class="fa-solid fa-map"></i></button>
+                            </div>
+                        </div>
+                    
+                        <div class="active-window-row active-window-row--centered-vertical">
+                       
+
+                            <div class="input--wrapper flex--1">
+
+                                <label class="active-window-label">In Category:</label>
+                                <select class="active-window-input active-window-input--nobold">
+
+                                    <option value="Madrid">Dance</option>
+                                    <option value="Berlin">Singing</option>
+    
+                                </select>
+                                <i class="fa-solid fa-angle-down custom-symbol"></i>
+                            </div>
+                               
+                           
+                            <div class="input--wrapper flex--1">
+
+                                <label class="active-window-label">Subcategory:</label>
+                                <select class="active-window-input active-window-input--nobold">
+
+                                    <option value="Madrid">Ballet</option>
+                                    <option value="Berlin">Breakdance</option>
+                                    <option value="London">Hip-hop</option>
+    
+                                </select>
+
+                                <i class="fa-solid fa-angle-down custom-symbol"></i>
+                            </div>
+                    
+                            <div class="active-window-equipment-wrapper flex--3">
+
+                                <span class="active-window-label">Equipment:</span>
+
+                                <div>
+                                    <input type="radio" id="full" name="equipment" value="full"/>
+                                    <label class="equipment-label" for="full">Full</label>
+                                </div>
+                                
+                                <div>
+                                    <input type="radio" id="part-equipment" name="equipment" value="Part Equipment"/>
+                                    <label class="equipment-label" for="part-equipment">Part Equipment</label>
+                                </div>
+                        
+                                <div>
+                                    <input type="radio" id="none" name="equipment" value="none" checked />
+                                    <label class="equipment-label" for="none">None</label>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="active-window-row">
+                            <button class="active-window-button-search" type="submit">Search</button>
+                        </div>
+                    
+                    </form>
+
+                    <div class="expand" onclick="toggleExpand()">
+                        <button class="expand-button"><i class="fa-solid fa-angle-down"></i></button>
+                    </div>
+                </div>
+               
+            </div>
+
+            <div class="wrapper wrapper--intro-swiper">
+
+                <div class="swiper intro-swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                    <!-- Slides -->
+                        <div class="swiper-slide intro-slide">
+
+                                <img src="/resources/images/intro-carousel/slide-1.png">
+
+                                <div class="intro-slide-content">
+
+                                    <h3 class="intro-slide-performer">Stars's Name</h3>
+
+                                    <p class="intro-slide-description truncet--2">Lorem ipsum dolor sit amet, consectetur Lorem ip
+                                        sum dolor sit.
+                                    </p>
+
+                                    <div class="intro-slide-rating">
+
+                                        <div class="intro-slide-stars">
+
+                                            <i class="fa-solid fa-star rating-star"></i>
+                                            <i class="fa-solid fa-star rating-star"></i>
+                                            <i class="fa-solid fa-star rating-star"></i>
+                                            <i class="fa-solid fa-star rating-star"></i>
+                                            <i class="fa-solid fa-star-half rating-star"></i>
+
+                                        </div>
+
+                                        <span class="intro-slide-reviews">(4.5 of 95 Reviews)</span>
+                                    </div>
+                                    
+                                </div>
+
+                        </div>
+
+                        <div class="swiper-slide intro-slide">
+
+                            <img src="/resources/images/intro-carousel/slide-2.png">
+
+                            <div class="intro-slide-content">
+
+                                <h3 class="intro-slide-performer">Stars's Name</h3>
+
+                                <p class="intro-slide-description truncet--2">Lorem ipsum dolor sit amet, consectetur Lorem ip
+                                    sum dolor sit.
+                                </p>
+
+                                <div class="intro-slide-rating">
+
+                                    <div class="intro-slide-stars">
+
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star-half rating-star"></i>
+
+                                    </div>
+
+                                    <span class="intro-slide-reviews">(4.5 of 95 Reviews)</span>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide intro-slide">
+
+                            <img src="/resources/images/intro-carousel/slide-3.png">
+
+                            <div class="intro-slide-content">
+
+                                <h3 class="intro-slide-performer">Stars's Name</h3>
+
+                                <p class="intro-slide-description truncet--2">Lorem ipsum dolor sit amet, consectetur Lorem ip
+                                    sum dolor sit.
+                                </p>
+
+                                <div class="intro-slide-rating">
+
+                                    <div class="intro-slide-stars">
+
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star-half rating-star"></i>
+
+                                    </div>
+
+                                    <span class="intro-slide-reviews">(4.5 of 95 Reviews)</span>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                        
+                        <div class="swiper-slide intro-slide">
+
+                            <img src="/resources/images/intro-carousel/slide-4.png">
+
+                            <div class="intro-slide-content">
+
+                                <h3 class="intro-slide-performer">Stars's Name</h3>
+
+                                <p class="intro-slide-description truncet--2">Lorem ipsum dolor sit amet, consectetur Lorem ip
+                                    sum dolor sit.
+                                </p>
+
+                                <div class="intro-slide-rating">
+
+                                    <div class="intro-slide-stars">
+
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star-half rating-star"></i>
+
+                                    </div>
+
+                                    <span class="intro-slide-reviews">(4.5 of 95 Reviews)</span>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                        
+                        <div class="swiper-slide intro-slide">
+
+                            <img src="/resources/images/intro-carousel/slide-5.png">
+
+                            <div class="intro-slide-content">
+
+                                <h3 class="intro-slide-performer">Stars's Name</h3>
+
+                                <p class="intro-slide-description truncet--2">Lorem ipsum dolor sit amet, consectetur Lorem ip
+                                    sum dolor sit.
+                                </p>
+
+                                <div class="intro-slide-rating">
+
+                                    <div class="intro-slide-stars">
+
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star-half rating-star"></i>
+
+                                    </div>
+
+                                    <span class="intro-slide-reviews">(4.5 of 95 Reviews)</span>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                        
+                        <div class="swiper-slide intro-slide">
+
+                            <img src="/resources/images/intro-carousel/slide-6.png">
+
+                            <div class="intro-slide-content">
+
+                                <h3 class="intro-slide-performer">Stars's Name</h3>
+
+                                <p class="intro-slide-description truncet--2">Lorem ipsum dolor sit amet, consectetur Lorem ip
+                                    sum dolor sit.
+                                </p>
+
+                                <div class="intro-slide-rating">
+
+                                    <div class="intro-slide-stars">
+
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star-half rating-star"></i>
+
+                                    </div>
+
+                                    <span class="intro-slide-reviews">(4.5 of 95 Reviews)</span>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide intro-slide">
+
+                            <img src="/resources/images/intro-carousel/slide-7.png">
+
+                            <div class="intro-slide-content">
+
+                                <h3 class="intro-slide-performer">Stars's Name</h3>
+
+                                <p class="intro-slide-description truncet--2">Lorem ipsum dolor sit amet, consectetur Lorem ip
+                                    sum dolor sit.
+                                </p>
+
+                                <div class="intro-slide-rating">
+
+                                    <div class="intro-slide-stars">
+
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star-half rating-star"></i>
+
+                                    </div>
+
+                                    <span class="intro-slide-reviews">(4.5 of 95 Reviews)</span>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+
+                        <!--COPIES-->
+                        <div class="swiper-slide intro-slide">
+
+                            <img src="/resources/images/intro-carousel/slide-4.png">
+
+                            <div class="intro-slide-content">
+
+                                <h3 class="intro-slide-performer">Stars's Name</h3>
+
+                                <p class="intro-slide-description truncet--2">Lorem ipsum dolor sit amet, consectetur Lorem ip
+                                    sum dolor sit.
+                                </p>
+
+                                <div class="intro-slide-rating">
+
+                                    <div class="intro-slide-stars">
+
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star-half rating-star"></i>
+
+                                    </div>
+
+                                    <span class="intro-slide-reviews">(4.5 of 95 Reviews)</span>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                        
+                        <div class="swiper-slide intro-slide">
+
+                            <img src="/resources/images/intro-carousel/slide-5.png">
+
+                            <div class="intro-slide-content">
+
+                                <h3 class="intro-slide-performer">Stars's Name</h3>
+
+                                <p class="intro-slide-description truncet--2">Lorem ipsum dolor sit amet, consectetur Lorem ip
+                                    sum dolor sit.
+                                </p>
+
+                                <div class="intro-slide-rating">
+
+                                    <div class="intro-slide-stars">
+
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star-half rating-star"></i>
+
+                                    </div>
+
+                                    <span class="intro-slide-reviews">(4.5 of 95 Reviews)</span>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                        
+                        <div class="swiper-slide intro-slide">
+
+                            <img src="/resources/images/intro-carousel/slide-6.png">
+
+                            <div class="intro-slide-content">
+
+                                <h3 class="intro-slide-performer">Stars's Name</h3>
+
+                                <p class="intro-slide-description truncet--2">Lorem ipsum dolor sit amet, consectetur Lorem ip
+                                    sum dolor sit.
+                                </p>
+
+                                <div class="intro-slide-rating">
+
+                                    <div class="intro-slide-stars">
+
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star-half rating-star"></i>
+
+                                    </div>
+
+                                    <span class="intro-slide-reviews">(4.5 of 95 Reviews)</span>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide intro-slide">
+
+                            <img src="/resources/images/intro-carousel/slide-7.png">
+
+                            <div class="intro-slide-content">
+
+                                <h3 class="intro-slide-performer">Stars's Name</h3>
+
+                                <p class="intro-slide-description truncet--2">Lorem ipsum dolor sit amet, consectetur Lorem ip
+                                    sum dolor sit.
+                                </p>
+
+                                <div class="intro-slide-rating">
+
+                                    <div class="intro-slide-stars">
+
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star rating-star"></i>
+                                        <i class="fa-solid fa-star-half rating-star"></i>
+
+                                    </div>
+
+                                    <span class="intro-slide-reviews">(4.5 of 95 Reviews)</span>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="intro-swiper-prev"><i class="fa-regular fa-circle-left"></i></div>
+                <div class="intro-swiper-next"><i class="fa-regular fa-circle-right"></i></div>
+            </div>
+
+        </section>
+        <!--INTRO END-->
+
+
+
+        <!--OCCASIONS-->
+        <section class="occasions">
+            <div class="wrapper">
+                <h2 class="occasions-title">Occasions</h2>
+
+                <div class="occasions__inner">
+
+                    <div class="occasions-card">
+                        <img src="/resources/images/occasions/occasion-1.png" alt="weddings">
+                        <span class="occasions-card-text">Weddings</span>
+                    </div>
+
+                    <div class="occasions-card">
+                        <img src="/resources/images/occasions/occasion-2.png" alt="parties">
+                        <span class="occasions-card-text">Parties</span>
+                    </div>
+
+                    <div class="occasions-card">
+                        <img src="/resources/images/occasions/occasion-3.png" alt="Disco">
+                        <span class="occasions-card-text">Disco</span>
+                    </div>
+
+                    <div class="occasions-card">
+                        <img src="/resources/images/occasions/occasion-4.png" alt="Birthdays">
+                        <span class="occasions-card-text">Birthdays</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--OCCASIONS END-->
+
+
+
+        <!--CITIES-->
+        <section class="cities">
+            <div class="wrapper">
+                <h2 class="cities-title">Featured Cities</h2>
+                
+                <div class="cities__grid">
+                    <div class="cities-grid-item">
+                        <img src="/resources/images/cities/berlin.png">
+
+                        <div class="city-info">
+                            <h4>Berlin</h4>
+                            <span class="city-subtext">2041 Events</span>
+                        </div>
+
+                    </div>
+
+                    <div class="cities-grid-item">
+                        <img src="/resources/images/cities/london.png">
+
+                        <div class="city-info">
+                            <h4>London</h4>
+                            <span class="city-subtext">769 Places</span>
+                        </div>
+
+                    </div>
+
+                    <div class="cities-grid-item">
+                        <img src="/resources/images/cities/madrid.png">
+
+                        <div class="city-info">
+                            <h4>Madrid</h4>
+                            <span class="city-subtext">802 Stars</span>
+                        </div>
+
+                    </div>
+
+                    <div class="cities-grid-item">
+                        <img src="/resources/images/cities/paris.png">
+
+                        <div class="city-info">
+                            <h4>Paris</h4>
+                            <span class="city-subtext">1205 Events</span>
+                        </div>
+
+                    </div>
+
+                    <div class="cities-grid-item">
+                        <img src="/resources/images/cities/rome.png">
+
+                        <div class="city-info">
+                            <h4>Rome</h4>
+                            <span class="city-subtext">659 Stars</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!--CITIES END-->
+
+
+
+        <!--STEPS-->
+        <section class="steps">
+            <div class="wrapper">
+                <h2 class="steps-title">Steps</h2>
+
+                <div class="steps__inner">
+
+                    <div class="steps-card">
+
+                        <h2 class="h2--white">Find</h2>
+                        <span class="card-bg-number">1</span>
+                        <img class="card-icon" src="/resources/images/svg/step-1.svg">
+
+                    </div>
+
+                    <div class="steps-card">
+
+                        <h2 class="h2--white">Book</h2>
+                        <span class="card-bg-number">2</span>
+                        <img class="card-icon-reverse" src="/resources/images/svg/step-2.svg">
+
+                    </div>
+
+                    <div class="steps-card">
+
+                        <h2 class="h2--white">Act</h2>
+                        <span class="card-bg-number">3</span>
+                        <img class="card-icon" src="/resources/images/svg/step-3.svg">
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!--STEPS END-->
+
+
+
+        <!--TESTIMONIALS-->
+        <section class="testimonials">
+            <div class="wrapper">
+                <h2 class="testimonials-title">Testimonials</h2>
+
+                <div class="swiper testimonials-swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                        <div class="swiper-slide testimonials-slide">
+
+                            <img src="/resources/images/testimonials/person-1.png">
+
+                            <h3 class="h3--black">Viktor Maxsimov</h3>
+                            <span class="testimonials-profession">dancer</span>
+
+                            <p class="testimonials-slide-description">
+                                “TalentJam is the most valuable business resource we have EVER purchased.
+                                Great job, I will definitely be ordering again! Best. Product.
+                                Ever! If you want real marketing that works and effective implementation - TalentJam's got you covered."
+                            </p>
+                        </div>
+
+                        <div class="swiper-slide testimonials-slide">
+
+                            <img src="/resources/images/testimonials/person-2.png">
+
+                            <h3 class="h3--black">Ivan Ivanov</h3>
+                            <span class="testimonials-profession">dancer</span>
+
+                            <p class="testimonials-slide-description">
+                                "Thanks guys, keep up the good work! Man, this thing is getting better and better as I learn more about it. Thanks TalentJam!"
+                            </p>
+                        </div>
+
+                        <div class="swiper-slide testimonials-slide">
+
+                            <img src="/resources/images/testimonials/person-3.png">
+
+                            <h3 class="h3--black">Ivan Ivanov</h3>
+                            <span class="testimonials-profession">dancer</span>
+
+                            <p class="testimonials-slide-description">
+                                "Thanks guys, keep up the good work! Man, this thing is getting better and better as I learn more about it. Thanks TalentJam!"
+                            </p>
+                        </div>
+
+                        <div class="swiper-slide testimonials-slide">
+
+                            <img src="/resources/images/testimonials/person-3.png">
+
+                            <h3 class="h3--black">Ivan Ivanov</h3>
+                            <span class="testimonials-profession">dancer</span>
+
+                            <p class="testimonials-slide-description">
+                                "Thanks guys, keep up the good work! Man, this thing is getting better and better as I learn more about it. Thanks TalentJam!"
+                            </p>
+                        </div>
+
+                        <div class="swiper-slide testimonials-slide">
+
+                            <img src="/resources/images/testimonials/person-1.png">
+
+                            <h3 class="h3--black">Viktor Maxsimov</h3>
+                            <span class="testimonials-profession">dancer</span>
+
+                            <p class="testimonials-slide-description">
+                                “TalentJam is the most valuable business resource we have EVER purchased.
+                                Great job, I will definitely be ordering again! Best. Product.
+                                Ever! If you want real marketing that works and effective implementation - TalentJam's got you covered."
+                            </p>
+                        </div>
+
+                        <div class="swiper-slide testimonials-slide">
+
+                            <img src="/resources/images/testimonials/person-3.png">
+
+                            <h3 class="h3--black">Ivan Ivanov</h3>
+                            <span class="testimonials-profession">dancer</span>
+
+                            <p class="testimonials-slide-description">
+                                "Thanks guys, keep up the good work! Man, this thing is getting better and better as I learn more about it. Thanks TalentJam!"
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="testimonials-swiper-prev"><i class="fa-regular fa-circle-left"></i></div>
+                    <div class="testimonials-swiper-next"><i class="fa-regular fa-circle-right"></i></div>
+                  
+                  </div>
+            </div>
+        </section>
+        <!--TESTIMONIALS END-->
+
+
+
+        <!--PARTNERS-->
+        <section class="partners">
+            <div class="wrapper">
+
+                <ul class="partners-list">
+                    <li>
+                        <a href="#">
+                            <img src="/resources/images/wilson.svg" alt="wilson logo">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="/resources/images/uniqlo.svg" alt="uniqlo logo">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="/resources/images/netjets.svg" alt="netjets logo">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="/resources/images/sunrise.svg" alt="sunrise logo">
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+        <!--PARTNERS END-->
+
+
+        <!--FOOTER-->
+        <footer class="footer">
+            <div class="bg">
+                <img src="/resources/images/footer-background.png">
+            </div>
+
+            <div class="wrapper">
+
+                <div class="footer__inner">
+
+                    <p class="copyright">&copy; Copyright 2018, TalentStar. All rights reserved.</p>
+
+                    <div class="footer-links-wrapper">
+                        <ul class="footer-links">
+                            <li class="footer-link-item">
+                                <a href="#" class="footer-link">About</a>
+                            </li>
+
+                            <li class="footer-link-item">
+                                <a href="#" class="footer-link">T&CC</a>
+                            </li>
+
+                            <li class="footer-link-item">
+                                <a href="#" class="footer-link">Contact US</a>
+                            </li>
+                        
+                        </ul>
+
+                        <ul class="footer-social-links">
+                            <li class=" footer-social-item">
+                                <a href="#" class="footer-social-link facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+
+                            <li class="footer-social-item">
+                                <a href="#" class="footer-social-link twitter"><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+
+                            <li class="footer-social-item">
+                                <a href="#" class="footer-social-link linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+        <!--FOOTER END-->
+
+
+        
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <script src="/resources/js/activeField.js"></script>
+    <script src="/resources/js/burgerToggle.js"></script>
+    <script src="/resources/js/closePopUp.js"></script>
+    <script src="/resources/js/dateSet.js"></script>
+    <script src="/resources/js/swiper.js"></script>
+    <script src="/resources/js/toggleExpand.js"></script>
+
+</body>
+</html>

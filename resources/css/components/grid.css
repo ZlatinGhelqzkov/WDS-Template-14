@@ -1,0 +1,24 @@
+.wrapper{
+    position: relative;
+    max-width: 1140px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+@media(min-width: 1170px){
+    .wrapper{
+        padding: 0;
+    }
+}
+
+.wrapper--intro-swiper{
+    max-width: 1620px;
+}
+
+.col-2{
+    flex: 0 0 calc(48% - var(--gap));
+}
+
+.col-3{
+    flex: 0 0 calc(33.333% - var(--gap));
+}

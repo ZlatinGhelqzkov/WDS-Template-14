@@ -1,0 +1,465 @@
+.intro{
+   padding-top: 16.4rem;
+   padding-bottom: 4rem;
+   height: 100%;
+   overflow-y: hidden;
+   z-index: 1010;
+}
+
+.intro .wrapper{
+    text-align: center;
+}
+
+.intro-title{
+    max-width: 65.5rem;
+    margin: auto;
+    margin-bottom: 8rem;
+}
+
+/*########################
+###### LOOKING FOR #######
+##########################*/
+
+.looking-for{
+    background: #fff;
+    padding-top: 2.4rem;
+    margin-bottom: 8.5rem;
+    border-radius: 5px;
+    filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.3));
+    background-color: #ffffff;
+}
+
+.looking-for h2{
+    margin-bottom: 2.2rem;
+}
+
+.looking-for-buttons{
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3.7rem;
+    transform: scale(1);
+    transition: 0.2s ease-in-out;
+    padding: 0 1.5rem;
+}
+
+@media(min-width: 576px){
+    .looking-for-buttons{
+        gap: 3.6rem;
+    }
+
+}
+
+.dissapear{
+    display: none;
+}
+
+.looking-for-button{
+    background: none;
+    border: none;
+    font-weight: 700;
+    font-size: 1.6rem;
+    padding: 0.45rem 1rem;
+    color: var(--primary-clr);
+    border: 1px solid var(--primary-clr);
+    border-radius: 0.6rem;
+    cursor: pointer;
+}
+
+.looking-for-button i{
+    margin-right: 0.3rem;
+}
+
+.expand{
+    background: var(--expand-clr);
+    border-top: 1px solid #dbeefa;
+}
+
+.expand button{
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 2.7rem;
+    color: var(--primary-clr);
+    padding: 1.6rem 0;
+    cursor: pointer;
+}
+
+.intro-slide img{
+    width: 100%;
+}
+
+.intro-slide{
+    border: 4px solid rgba(255,255,255,0.35);
+    border-radius: 5px;
+}
+
+.intro-slide-content{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0 0 0 /0.6);
+    position: absolute;
+    text-align: start;
+    padding: 1.6rem 2rem 2rem 2.3rem;
+}
+    
+.intro-slide-performer{
+    margin-bottom: 0.5rem;
+}
+
+.intro-slide-description{
+    margin-bottom: 1.2rem;
+    /* Other styles are in the description.css */
+}
+
+.intro-slide-rating{
+    display: flex;
+    align-items: center;
+}
+
+.rating-star{
+    color: var(--star-clr);
+}
+
+.intro-slide-reviews{
+    font-size: 1rem;
+    color: #ffffff;
+    font-style: italic;
+}
+
+/*########################
+###### LOOKING FOR ACTIVE #######
+##########################*/
+
+.active-window{
+    padding: 0 1.5rem;
+    transform: scale(0);
+    opacity: 0;
+    height: 0px;
+    transition: 0.3s ease-in-out;
+}
+
+@media(min-width: 1024px){
+    .active-window{
+        padding: 0 3.5rem;
+    }
+}
+
+@media(min-width: 1200px){
+    .active-window{
+        padding: 0 7.5rem
+    }
+}
+
+.expanded-form{
+    transform: scale(1);
+    height: 100%;
+    opacity: 1;
+}
+
+.active-window-row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 5.7rem;
+}
+
+@media(min-width: 768px){
+    .active-window-row{
+        gap: 0;
+        justify-content: space-between;
+    }
+}
+
+.active-window-row:last-of-type{
+    margin-bottom: 3rem;
+    justify-content: center;
+}
+
+.active-window-row--centered-vertical{
+    align-items: center;
+}
+
+
+/*########################
+###### SELECT--FIND #######
+##########################*/
+
+
+.dropdown-radio{
+    position: relative;
+    display: block;
+    color: var(--primary-clr);
+    background: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.focused{
+    background: var(--primary-clr);
+    color: #fff;
+    padding: 2rem 4rem 5rem;
+}
+
+.dropdown-radio-label {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--primary-clr);
+}
+
+.select--find-arrow{
+    position: absolute;
+    right: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease-in-out, right 0.3s ease-in-out;
+}
+
+.focused--rotate{
+    transform: rotate(180deg);
+    right: 3rem;
+}
+
+.dropdown-radio-content{
+    display: none;
+    /*Later changes to display: flex from JS*/
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    bottom: 4.35rem;
+    left: 0;
+    right: 0;
+    text-align: left;
+    transform:translateY(100%);
+    color: #000;
+    z-index: 1000;
+    transition: 0.2s ease-in-out;
+}
+
+.option {
+    width: 92%;
+    position: relative;
+    padding: 1.2rem 1.5rem 1.2rem;
+    background: #f3f9fd;
+    border-bottom: 1px solid #dbeefa;
+}
+
+.option:nth-of-type(2){
+    background: #fff;
+}
+
+.option:hover {
+     
+    background: #81bce0;
+}
+
+.option input{
+    width: 100%;
+    cursor: pointer;
+}
+
+.option input[type="radio"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+.input--wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.input--date{
+    padding: 0rem 0.5rem;
+}
+
+
+.active-window-input{
+    position: relative;
+    color: var(--primary-clr);
+    border: 1px solid var(--primary-clr);
+    background: transparent;
+    padding: 0.8rem 1.9rem;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.active-window-input--nobold{
+    font-weight: 400;
+}
+
+.active-window-label{
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-clr);
+    transform:translateY(-50%);
+}
+
+.custom-symbol{
+    position: absolute;
+    display: block;
+    top: 50%;
+    color: var(--primary-clr);
+    font-size: 1.6rem;
+    right: 1.9rem;
+    font-weight: 700;
+    transform: translate(50%, -50%);
+    line-height: 1;
+    pointer-events: none;
+}
+
+.flex--3{
+    flex: 0 0 100%;
+    margin-bottom: 2rem;
+}
+
+.flex--1{
+    flex: 0 0 100%;
+    margin-bottom: 2rem;
+}
+
+
+
+@media(min-width: 768px){
+    .flex--3{
+        flex: 0 0 calc(33% - 1.5rem);
+        margin: 0;
+    }
+
+    .flex--1 {
+        flex: 0 0 calc(33% - 1.5rem);
+        margin: 0;
+    }
+}
+
+@media(min-width: 1024px){
+    .flex--3{
+        flex: 0 0 calc(40% - 2.5rem);
+    }
+
+    .flex--1 {
+        flex: 0 0 calc(30% - 2.5rem);
+    }
+}
+
+@media(min-width: 1200px){
+    .flex--3{
+        flex: 0 0 calc(45% - 7.5rem);
+    }
+
+    .flex--1 {
+        flex: 0 0 calc(30% - 7.5rem);
+    }
+}
+
+
+
+.active-window-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 0 2rem;
+    height: 42px;
+    width: 100%;
+    font-size: 1.6rem;
+    border: 1px solid var(--primary-clr);
+    background-color: var(--primary-clr);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.active-window-equipment-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: var(--primary-clr);
+}
+
+@media((min-width: 768px) and (max-width: 1023px)){
+    .active-window-equipment-wrapper{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+}
+
+
+.active-window-equipment-wrapper .active-window-label{
+    margin-bottom: unset;
+    top: unset;
+    position: relative;
+    transform:translateY(0);
+}
+
+.active-window-button-search{
+    font-size: 16px;
+    padding: 0.75rem 3.6rem;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 17px;
+    background-color: #0e8edf;
+    border: none;
+}
+
+.expand-button{
+    transition: 0.2s ease-in-out;
+}
+
+.expanded-button{
+    transform:rotate(180deg);
+}
+
+/*########################
+##### SWIPER ARROWS ######
+########################*/
+
+.intro-swiper-prev,
+.intro-swiper-next{
+    display: none;
+    position: absolute;
+    font-size: 3rem;
+    line-height: 1;
+    color: #ffffff;
+    left: -11rem;
+    top: 50%;
+    z-index: 10;
+    transform:translate(-50%);
+    cursor: pointer;
+}
+
+.intro-swiper-next{
+    left: unset;
+    right: -11rem;
+    transform:translate(50%);
+}
+
+@media(min-width: 1600px){
+    .intro-swiper-next,
+    .intro-swiper-prev{
+        display: block;
+    }
+}

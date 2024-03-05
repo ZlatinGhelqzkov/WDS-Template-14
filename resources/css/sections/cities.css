@@ -1,0 +1,85 @@
+.cities{
+    background: var(--section-clr);
+    text-align: center;
+    padding: 6rem 0rem 7rem;
+}
+
+.cities h2{
+    margin-bottom: 5rem;
+}
+
+.cities__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns with equal fraction */
+    grid-template-rows: auto auto; /* 2 rows */
+    gap: 1rem;
+}
+
+@media(min-width: 1024px){
+    .cities__grid{
+        grid-template-columns: repeat(6, 1fr); /* 6 columns with equal fraction */
+        grid-template-rows: auto auto; /* 2 rows */
+    }
+}
+
+.cities-grid-item{
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.cities-grid-item::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0 0 0 / 0.3);
+    z-index: 2;
+}
+
+/* Span first three items across the first row 
+    We have 6 columns so we make every elemnt to span 2 columns, so that we have 3 on the row.
+
+*/
+.cities-grid-item:nth-child(1) { grid-column: 1 / span 2; }
+.cities-grid-item:nth-child(2) { grid-column: 3 / span 2; }
+.cities-grid-item:nth-child(3) { grid-column: 5 / span 2; }
+
+/*Here on the next row, we make them span 3 columns, because we want them bigger*/
+.cities-grid-item:nth-child(4) { grid-column: 1 / span 3; }
+.cities-grid-item:nth-child(5) { grid-column: 4 / span 3; } 
+
+.city-info{
+    text-align: left;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    z-index: 10;
+}
+
+.city-subtext{
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+@media(min-width: 768px){
+    .city-info{
+        bottom: 2rem;
+        left: 2rem;
+    }
+
+    .city-subtext{
+        font-size: 2.5rem;
+    }
+}
+
+@media(min-width: 1024px){
+    .city-info{
+        bottom: 5.3rem;
+        left: 5rem;
+    }
+
+}

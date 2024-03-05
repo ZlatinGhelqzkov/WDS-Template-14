@@ -1,0 +1,164 @@
+.burger {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.burger-line-top,
+.burger-line-center,
+.burger-line-bottom {
+    width: 3rem;
+    height: 0.5rem;
+    border-radius: 1.5rem;
+    background: #fff;
+    z-index: 10;
+    transition: 0.3s ease-in-out;
+}
+
+.burger-line-top,
+.burger-line-center {
+    margin-bottom: 5px;
+}
+
+.burger-line-center{
+    width: 2rem;
+}
+
+.burger-line-bottom{
+    width: 3rem;
+}
+
+.burger--clicked {
+    z-index: 1010;
+}
+
+.burger--clicked .burger-line-top
+{
+    animation-name: line-top;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.burger--clicked .burger-line-center{
+    animation-name: line-center;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.burger--clicked .burger-line-bottom{
+    animation-name: line-bottom;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes line-top{
+    0%{
+        margin: 0px;
+    }
+    30%{
+        margin: 0px;
+        transform: translateY(150%);
+    }
+    100%{
+        margin: 0px;
+        transform: translateY(150%) rotate(45deg);
+    }
+}
+
+@keyframes line-center{
+    from {
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes line-bottom{
+    0%{
+        margin: 0px;
+    }
+    30%{
+        margin: 0px;
+        transform: translateY(-150%);
+    }
+    100%{
+        margin: 0px;
+        transform: translateY(-150%) rotate(-45deg);
+    }
+}
+
+/*#########################
+######REVERSE ANIMATION####
+###########################*/
+
+.burger:not(.burger--clicked) .burger-line-top {
+    animation-name: line-top-reverse;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.burger:not(.burger--clicked) .burger-line-center {
+    animation-name: line-center-reverse;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.burger:not(.burger--clicked) .burger-line-bottom {
+    animation-name: line-bottom-reverse;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes line-top-reverse {
+    0% {
+        transform: translateY(150%) rotate(45deg);
+    }
+
+    50%{
+        transform:  translateY(150%) rotate(0);
+    }
+    100% {
+        transform: translateY(0%) rotate(0);
+    }
+}
+
+@keyframes line-center-reverse {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes line-bottom-reverse {
+    0% {
+        transform: translateY(-150%) rotate(-45deg);
+    }
+
+    50%{
+        transform:  translateY(-150%) rotate(0);
+    }
+
+    100% {
+        transform: translateY(0%) rotate(0);
+    }
+}
+
+
+@media(min-width: 992px){
+
+    .burger{
+        display: none;
+    }
+}
