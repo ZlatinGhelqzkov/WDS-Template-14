@@ -1,40 +1,40 @@
 /*##############################
 ############ RESET #############
 ##############################*/
-@import url(/resources/css/reset.css);
+@import url(./reset.css);
 
 
 
 /*##############################
 ########## TYPOGRAPHY ##########
 ##############################*/
-@import url(/resources/css/typograpghy/headings.css);
-@import url(/resources/css/typograpghy/links.css);
-@import url(/resources/css/typograpghy/paragraphs.css);
+@import url(./typograpghy/headings.css);
+@import url(./typograpghy/links.css);
+@import url(./typograpghy/paragraphs.css);
 
 
 
 /*##############################
 ########## COMPONENTS ##########
 ##############################*/
-@import url(/resources/css/components/grid.css);
-@import url(/resources/css/components/bg.css);
-@import url(/resources/css/components/widgets.css);
-@import url(/resources/css/components/burger.css);
+@import url(./components/grid.css);
+@import url(./components/bg.css);
+@import url(./components/widgets.css);
+@import url(./components/burger.css);
 
 
 
 /*##############################
 ########## SECTIONS ##########
 ##############################*/
-@import url(/resources/css/sections/header.css);
-@import url(/resources/css/sections/intro.css);
-@import url(/resources/css/sections/occasions.css);
-@import url(/resources/css/sections/cities.css);
-@import url(/resources/css/sections/steps.css);
-@import url(/resources/css/sections/testimonials.css);
-@import url(/resources/css/sections/partners.css);
-@import url(/resources/css/sections/footer.css);
+@import url(./sections/header.css);
+@import url(./sections/intro.css);
+@import url(./sections/occasions.css);
+@import url(./sections/cities.css);
+@import url(./sections/steps.css);
+@import url(./sections/testimonials.css);
+@import url(./sections/partners.css);
+@import url(./sections/footer.css);
 
 
 :root{
